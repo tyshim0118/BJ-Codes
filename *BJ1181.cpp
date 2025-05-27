@@ -1,3 +1,9 @@
+/*
+
+STD sort()와, 그 활용법, sort의 정렬 규칙을 bool 타입 함수를 정의하여 사용할 수 있음을 알 수 있었다.
+sort()는 현업에서도 많이 사용하는 함수라고 한다. 기억해 두는 편이 좋을 것 같다.
+
+*/
 //단어 정렬 - 실버 5
 #include <algorithm>
 #include <iostream>
