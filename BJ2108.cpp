@@ -49,3 +49,27 @@ int main() {
     sort(v.begin(), v.end());
     cout << mean(v, N) << "\n" << median(v, N) << "\n" << mode(v, N) << "\n" << range(v);
 }
+
+
+//다른 사람의 mode()를 가지고 와 내 스타일로 변경해보았다.
+
+int mode(vector<int> v)
+{
+    map<int, int> m;
+    vector<int> s;
+    for (auto &i : v)
+        m[i]++;
+    int max = 0;
+    for (const auto &[key, value] : m)
+        max = max < value ? value : max;
+    for (const auto &[key, value] : m)
+        if (value == max)
+            s.push_back(key)
+                ;
+    sort(s.begin(), s.end());
+    if (s.size() > 1)
+        return s.at(1);
+    else
+        return s.at(0);
+}
+
