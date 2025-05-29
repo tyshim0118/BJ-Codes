@@ -1,21 +1,39 @@
 //통계학 - 실버 2
 
 #include <algorithm>
+#include <cmath>
 #include <iostream>
 using namespace std;
-vector<int>::iterator it;
 
-int avg(vector<int> v, int size) {
+int mean(vector<int> v, int size) {
     double temp = 0;
-    it = v.begin();
-    while (it != v.end()) {
-        temp += *it;
-        it++;
-    }
+    for (int i : v) temp += i;
     return round(temp / size);
 }
 
-int middle(vector<int> v, int n) { return v.at(n / 2); }
+int median(vector<int> v, int n) { return v.at(n / 2); }
+
+int mode(vector<int> v, int n) {
+    vector<int> counter;
+    int curCount, maxCount = 0, value, i = 0;
+    vector<int>::iterator it = v.begin();
+    while (i < n) {
+        value = v.at(i);
+        curCount = count(it, v.end(), value);
+        if (curCount >= maxCount) {
+            if (curCount > maxCount) counter.clear();
+            counter.push_back(value);
+            maxCount = curCount;
+        }
+        i += curCount;
+        it += curCount;
+    }
+    sort(counter.begin(), counter.end());
+    if (counter.size() > 1)
+        return counter.at(1);
+    else
+        return counter.at(0);
+}
 
 int range(vector<int> v) { return *v.rbegin() - *v.begin(); }
 
@@ -29,7 +47,5 @@ int main() {
         v.push_back(t);
     }
     sort(v.begin(), v.end());
-    cout << avg(v, N) << "\n";
-    cout << middle(v, N) << "\n";
-    cout << range(v);
+    cout << mean(v, N) << "\n" << median(v, N) << "\n" << mode(v, N) << "\n" << range(v);
 }
