@@ -1,3 +1,11 @@
+/*
+
+range-based for loop에 대해 처음 알았고,
+vector의 다양한 기능들을 사용해볼 수 있었으며, 또 cmath의 round() 등 새로운
+것들을 많이 경험하고 사용했기에 중요했던 문제라고 생각함. 따라서 *을 붙임.
+
+*/
+
 //통계학 - 실버 2
 
 #include <algorithm>
