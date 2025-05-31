@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     int N, t;
     stack<int> s;
+    //s.push(0)
     string str = "";
     cin >> N;
     int seq[N];
@@ -18,9 +19,9 @@ int main() {
     int prev = 0;
     string p = "+\n", m = "-\n";
     for (int e : seq) {
-        if (!s.size()) {
+        if (!s.size()) { //굳이 이렇게 안하고 이 if문 대신 처음에 stack 선언할 때 s.push(0)하는 게 더 좋을 듯
             s.push(0);
-        }
+        } 
         if (s.top() > e) {cout << "NO"; return 0; }
         if (s.top() < e) {
             for (int j = prev+1; j <= e; j++) {
