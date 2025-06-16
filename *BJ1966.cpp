@@ -1,5 +1,3 @@
-//프린터 큐 - 실버 3
-
 /*
 
 queue와 pair를 제대로 처음 써봤다. 이런저런 알고리즘, 예를 들어 iterator를 이용한
@@ -7,6 +5,8 @@ erase()와 같은 알고리즘도 제대로 썼고, queue에 pair를 접합해�
 충분히 *을 달아놓을 가치가 있다고 느꼈다. 앞으로 pair를 자주 사용하게 될 것 같다.
 
 */
+
+//프린터 큐 - 실버 3
 
 #include <algorithm>
 #include <iostream>
