@@ -15,8 +15,7 @@ void Q(string order, queue<int>& q) {
     } else if (order == "size") {
         cout << q.size();
     } else if (order == "empty") {
-        if (!q.empty()) cout << 0;
-        else cout << 1;
+        cout << q.empty();
     } else if (order == "front") {
         if (!q.empty()) cout << q.front();
         else cout << -1;
