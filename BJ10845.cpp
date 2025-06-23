@@ -13,8 +13,7 @@ void Q(string order, queue<int>& q) {
         if (!q.empty()) { cout << q.front(); q.pop();
         } else cout << -1;
     } else if (order == "size") {
-        if (!q.empty()) cout << q.size();
-        else cout << 0;
+        cout << q.size();
     } else if (order == "empty") {
         if (!q.empty()) cout << 0;
         else cout << 1;
