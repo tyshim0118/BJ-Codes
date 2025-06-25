@@ -1,8 +1,13 @@
 /*
 
-이번 문제는 unordered_map을 사용하는 문제였다. unordered_map은 해시 테이블 기반의 key와 value를 가지는 자료구조이다. key는 first로, value는 second로 접근하는데, 이 때는 iterator를 사용해서 it->first, it->second와 관련된 형태로 접근해야한다.
+이번 문제는 unordered_map을 사용하는 문제였다. 
+unordered_map은 해시 테이블 기반의 key와 value를 가지는 자료구조이다. 
+key는 first로, value는 second로 접근하는데, 
+이 때는 iterator를 사용해서 it->first, it->second와 관련된 형태로 접근해야한다.
 
-unordered_map은 그냥 map과 달리 해시테이블 기반의 map이기 때문에 이진트리의 형식을 기본적으로 사용하는 그냥 Map에 비해 삽입, 삭제, 원소 접근 등이 빠르다. 초기화나 선언, 메소드 등은 map과 비슷하므로 따로 적진 않겠다.
+unordered_map은 그냥 map과 달리 해시테이블 기반의 map이기 때문에 
+이진트리의 형식을 기본적으로 사용하는 그냥 Map에 비해 삽입, 삭제, 원소 접근 등이 빠르다. 
+초기화나 선언, 메소드 등은 map과 비슷하므로 따로 적진 않겠다.
 
 */
 
@@ -14,6 +19,8 @@ unordered_map은 그냥 map과 달리 해시테이블 기반의 map이기 때문
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     unordered_map<int, int> cards;
     int N, M;
     cin >> N;
