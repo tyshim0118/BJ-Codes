@@ -1,3 +1,5 @@
+//부녀회장이 될테야 - 브론즈 1
+
 #include <iostream>
 using namespace std;
 
