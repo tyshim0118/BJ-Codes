@@ -26,8 +26,10 @@ int main() {
         Dungchi temp = {w, h};
         auto it = d.begin();
         while (it != d.end()) {
-            if (*it < temp) (*it).rank++;
-            else if (*it > temp) temp.rank++;
+            if (*it < temp) 
+                (*it).rank++;
+            else if 
+                (*it > temp) temp.rank++;
             it++;
         }
         d.push_back(temp);
