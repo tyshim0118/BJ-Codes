@@ -6,7 +6,7 @@ using namespace std;
 
 struct Dungchi {
     int weight = 0, height = 0, rank = 1;
-		bool operator>(Dungchi);
+    bool operator>(Dungchi);
     bool operator<(Dungchi);
 };
 bool Dungchi::operator>(Dungchi d) { 
