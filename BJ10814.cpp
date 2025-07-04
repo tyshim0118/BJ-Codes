@@ -15,11 +15,12 @@ bool cmp(member p1, member p2) {
 }
 
 int main() {
-    int N, age;
-    string name;
+    int N;
     cin >> N;
     vector<member> v;
     for (int i = 0; i < N; i++) {
+        int age;
+        string name;
         cin >> age >> name;
         v.push_back({age, i, name});
     }
