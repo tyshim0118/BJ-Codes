@@ -9,6 +9,7 @@ int search(unordered_set<int>& s, int i) {
 }
 int main() {
     ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int N;
     unordered_set<int> A;
     cin >> N;
